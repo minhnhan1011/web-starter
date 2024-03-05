@@ -1,0 +1,248 @@
+/* Reset CSS */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#main{
+
+}
+
+.clear{
+    clear: both;
+}
+
+/* CSS quan trọng để đổi màu chữ thành màu trắng */
+.text-white{
+    color: #fff !important;
+}
+
+#header{
+    height: 46px;
+    /* width: 100%; */
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1; /* Để phần nav trồi lên trên ảnh */
+}
+
+#nav{
+    display: inline-block;
+}
+
+
+#nav > li{
+    display: inline-block; 
+}
+
+#nav li{
+    position: relative; /* position relative de thang navsub position absolute */
+    list-style-type: none;
+
+}
+
+/* chi co the a va li co id = nav cap 1 dc thua huong */
+#nav > li > a{
+    color: #fff;
+    text-transform: uppercase;
+}
+
+/* Tat ca thang co id=nav li a deu dc thua huong */
+#nav li a{
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 24px;
+    display: block; /* co tinh chat khoi nhung vi co inline nen kh ke thua chieu ngang va chieu doc */
+    transition: 2ms;
+
+}
+
+#nav li:hover .subnav{
+    display: block;
+
+
+}
+
+/* 2 selector dung chung 1 thuoc tinh */
+#nav .subnav li:hover a,
+#nav > li:hover > a{
+    background-color: #ccc;
+    color: #000;
+
+}
+
+#nav .subnav{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#nav .subnav a{
+    color: #333;
+    padding: 0 12px;
+    line-height: 38px;
+    min-width: 160px;
+}
+
+/* cmt nay da~ dan len tren */
+/* #nav .subnav li:hover a{
+    background-color: #ccc;
+    color: #000;
+
+} */
+
+/* Hình mũi tên đi xuống kế bên chữ More */
+#nav .nav-arrow{
+    font-size: 12px;
+    padding: 8px;
+}
+
+#header .search-btn{
+    float: right; /* Làm cho nút tìm kiếm kéo về bên phải */
+    padding: 0 21px;
+
+}
+
+#header .search-btn:hover{
+    cursor: pointer; /* Khi di chuột vào nút tìm kiếm sẽ thay đổi con trỏ */
+    background-color: red;
+}
+
+#header .search-icon{
+    font-size: 15px;
+    color: #fff;
+    line-height: 46px; /* Canh nút tìm kiếm ngang với các chữ trên nav */
+}
+#slider{
+    position: relative;
+    margin-top: 46px;
+    padding-top: 50%;
+    background: url('/assets/img/slider/slider1.webp') top center / cover no-repeat; 
+}
+
+
+
+#slider .text-content{
+    position: absolute; /* Lấy thuộc tính position của #slider relative làm thuộc tính cha */
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+
+}
+
+#slider .text-heading{
+    font-weight: 500;
+    font-size: 27px;
+
+}
+
+#slider .text-description{
+    font-size: 20px;
+    margin: 25px; /* Khoảng cách giữa 2 chữ */
+}
+
+#content{
+    min-height: 1000px;
+}
+
+#content .content-section{
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 0 64px 0;
+}
+
+#content .section-heading{
+    font-size: 30px;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+
+#content .section-sub-heading{
+    text-align: center;
+    font-size: 17px;
+    margin-top: 25px;
+    font-style: italic;
+    opacity: 0.5;
+}
+
+#content .about-text{
+    margin-top: 25px;
+    font-size: 13px;
+    text-align: justify;
+    line-height: 1.4;
+}
+
+#content .member-list{
+    margin-top: 48px;
+    text-align: center;
+
+}
+
+#content .member-item{
+    float: left;
+    width: calc(100% / 3);
+}
+
+#content .avt{
+    margin-top: 15px;
+    width: 154px;
+    border-radius: 2%;
+}
+
+#content .member-name{
+    font-size: 16px;
+}
+
+.tour-section{
+    background-color: #000;
+
+}
+
+.tickets-list{
+    background-color: #fff;
+    margin-top: 40px;
+    list-style: none;
+}
+
+.tickets-list li{
+    font-size: 15px;
+    padding: 11px 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+.tickets-list .sold-out{
+    background-color: #f44336;
+    color: #fff;
+    padding: 3px 4px;
+    margin-left: 16px;
+    float: right;
+}
+
+.tickets-list .quantity{
+    float: right;
+    background-color: #000;
+    color: #fff;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+}
+
+#footer{
+
+}
