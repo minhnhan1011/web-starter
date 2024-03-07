@@ -6,10 +6,6 @@
     <title>Shop cầu lông</title>
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/font-icon/themify-icons/themify-icons.css">
-    <script>
-        window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-      </script>
-      <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
     <div id="main">
@@ -88,7 +84,7 @@
                                 <h3 class="place-heading">New York</h3>
                                 <p class="place-time">Thứ Sáu, 27 tháng 1 năm 2020</p>
                                 <p class="place-description">NewYork xứ sở thần tiên.</p>
-                                <button class="place-buy-btn">Mua vé</button>
+                                <button class="place-buy-btn js-buy-tickets">Mua vé</button>
                             </div>
                         </div>
                         <div class="place-item">
@@ -97,7 +93,7 @@
                                 <h3 class="place-heading">Paris</h3>
                                 <p class="place-time">Thứ Bảy, 05 tháng 7 năm 2020</p>
                                 <p class="place-description">Paris xứ sở tình yêu.</p>
-                                <button class="place-buy-btn">Mua vé</button>
+                                <button class="place-buy-btn js-buy-tickets">Mua vé</button>
                             </div>
                         </div>
                         <div class="place-item">
@@ -106,7 +102,7 @@
                                 <h3 class="place-heading">San Francisco</h3>
                                 <p class="place-time">Chủ Nhật, 10 tháng 11 năm 2021</p>
                                 <p class="place-description">Xứ sở băng hà.</p>
-                                <button class="place-buy-btn">Mua vé</button>
+                                <button class="place-buy-btn js-buy-tickets">Mua vé</button>
                             </div>
                         </div>
                         <div class="clear"></div>
@@ -129,9 +125,9 @@
     </div>
 
 
-    <div class="modal open">
-        <div class="modal-container">
-            <div class="modal-close">
+    <div class="modal js-modal">
+        <div class="modal-container js-modal-container">
+            <div class="modal-close js-modal-close">
                 <i class="ti-close"></i>
             </div>
             <header class="modal-header">
@@ -143,7 +139,7 @@
                     <i class="ti-shopping-cart"></i>
                     Nhập số lượng vé
                 </label>
-                <input id="quantity-ticket" type="text" class="modal-input" placeholder="Nhập số vé">
+                <input id="quantity" type="text" class="modal-input" placeholder="Nhập số vé">
 
                 <label for="send-mail-ticket" class="modal-label">
                     <i class="ti-user"></i>
@@ -161,5 +157,34 @@
             </footer>
         </div>
     </div>
+
+<script>
+    const buyBtns = document.querySelectorAll('.js-buy-tickets')
+    const modal = document.querySelector('.js-modal')
+    const modalClose = document.querySelector('.js-modal-close')
+    const modalContainer = document.querySelector('.js-modal-container')
+
+    // Ham hien thi modal mua ve
+    function showBuyTickets(){
+        modal.classList.add('open')
+    }
+
+    // Ham an modal mua ve ( bo class open cua modal )
+    function hideBuyTickets(){
+        modal.classList.remove('open')
+    }
+
+    // Lap qua tung the button va nghe hanh vi click
+    for (const buyBtn of buyBtns){
+        buyBtn.addEventListener('click', showBuyTickets)
+    }
+    // Nghe hanh vi click vao button close
+    modalClose.addEventListener('click', hideBuyTickets)
+    modal.addEventListener('click', hideBuyTickets)
+    modalContainer.addEventListener('click', function(event){
+        event.stopPropagation();
+    })
+</script>   
 </body>
+
 </html>

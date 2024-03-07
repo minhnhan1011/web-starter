@@ -7,6 +7,7 @@
 
 html{
     font-family: 'Times New Roman', Times, serif;
+    width: 100%;
 }
 
 #main{
@@ -276,6 +277,10 @@ html{
     font-size: 15px;
 }
 
+.place-body button{
+    cursor: pointer;
+}
+
 .place-time{
     margin-top: 15px;
     color: #a5b1c4;
@@ -307,13 +312,14 @@ html{
     bottom: 0;
     left: 0;
     right: 0;
+    margin-top: 40px;
     background-color: rgba(0, 0, 0, 0.4);
     align-items: center;
     justify-content: center;
     display: none;
 }
 
-.modal .open{
+.modal.open{
     display: flex;
 }
 
@@ -323,6 +329,7 @@ html{
     max-width: calc(100%-32px);
     min-height: 200px;
     position: relative;
+    animation: modalFadeIn ease .8s;
 }
 
 .modal-header{
@@ -398,6 +405,17 @@ html{
 
 .modal-footer a{
     color: #2196f3;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 #footer{
