@@ -8,6 +8,7 @@
 html{
     font-family: 'Times New Roman', Times, serif;
     width: 100%;
+    scroll-behavior: smooth;
 }
 
 .text-center{
@@ -183,12 +184,14 @@ html{
 }
 #slider{
     position: relative;
-    margin-top: 46px;
+    /* margin-top: 46px;
     padding-top: 50%;
-    background: url('/assets/img/slider/slider1.webp') top center / cover no-repeat; 
+    background: url('/assets/img/slider/slider1.webp') top center / cover no-repeat;  */
 }
 
-
+#slider img{
+    width: 100%;
+}
 
 #slider .text-content{
     position: absolute; /* Lấy thuộc tính position của #slider relative làm thuộc tính cha */
