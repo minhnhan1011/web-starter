@@ -48,17 +48,17 @@
                 <h2 class="section-heading">BADMINTON</h2>
                 <p class="section-sub-heading">We love badminton</p>
                 <p class="about-text">Cầu lông, một môn thể thao tuyệt vời, kết hợp sức mạnh và sự tinh tế, thu hút người chơi từ khắp nơi trên thế giới. Trò chơi này yêu cầu kỹ thuật cao và tốc độ nhanh chóng khi hai đội chơi đối đầu nhau trên sân. Cầu lông đòi hỏi sự linh hoạt, sự đồng đội và chiến thuật tốt để chiến thắng. Người chơi sử dụng vợt nhẹ và cú đánh khéo léo để đưa cầu qua mạng, tạo nên những pha bóng đẹp mắt. Môn thể thao này không chỉ là một hoạt động giải trí mà còn là một cách tuyệt vời để cải thiện sức khỏe và tăng cường sự gắn kết xã hội.</p>
-                <div class="member-list">
-                    <div class="member-item">
-                        <p class="member-name">Name</p>
+                <div class=" row member-list">
+                    <div class="col col-third text-center">
+                        <p class="member-name">Name1</p>
                         <img src="./assets/img/content-img/pic1.jpg" alt="Name" class="avt">
                     </div>
-                    <div class="member-item">
-                        <p class="member-name">Name</p>
+                    <div class="col col-third text-center">
+                        <p class="member-name">Name2</p>
                         <img src="./assets/img/content-img/pic2.jpg" alt="Name" class="avt">
                     </div>
-                    <div class="member-item">
-                        <p class="member-name">Name</p>
+                    <div class="col col-third text-center">
+                        <p class="member-name">Name3</p>
                         <img src="./assets/img/content-img/pic3.jpg" alt="Name" class="avt">
                     </div>
                     <div class="clear"></div>
@@ -77,32 +77,32 @@
                     </ul>
 
                     <!-- Tourplace -->
-                    <div class="place-list">
-                        <div class="place-item">
+                    <div class="row place-list">
+                        <div class="col col-third">
                             <img src="./assets/img/tour-img/newyork.jpg" alt="New York" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">New York</h3>
                                 <p class="place-time">Thứ Sáu, 27 tháng 1 năm 2020</p>
                                 <p class="place-description">NewYork xứ sở thần tiên.</p>
-                                <button class="place-buy-btn js-buy-tickets">Mua vé</button>
+                                <button class="btn js-buy-tickets">Mua vé</button>
                             </div>
                         </div>
-                        <div class="place-item">
+                        <div class="col col-third">
                             <img src="./assets/img/tour-img/paris.jpg" alt="Paris" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">Paris</h3>
                                 <p class="place-time">Thứ Bảy, 05 tháng 7 năm 2020</p>
                                 <p class="place-description">Paris xứ sở tình yêu.</p>
-                                <button class="place-buy-btn js-buy-tickets">Mua vé</button>
+                                <button class="btn js-buy-tickets">Mua vé</button>
                             </div>
                         </div>
-                        <div class="place-item">
+                        <div class="col col-third">
                             <img src="./assets/img/tour-img/sanfran.jpg" alt="San Francisco" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">San Francisco</h3>
                                 <p class="place-time">Chủ Nhật, 10 tháng 11 năm 2021</p>
                                 <p class="place-description">Xứ sở băng hà.</p>
-                                <button class="place-buy-btn js-buy-tickets">Mua vé</button>
+                                <button class="btn js-buy-tickets">Mua vé</button>
                             </div>
                         </div>
                         <div class="clear"></div>
@@ -111,16 +111,51 @@
 
             </div>
 
-            <!-- Contact section -->
+            <!-- Begin: Contact section -->
             <div class="content-section">
                 <h2 class="section-heading">Liên hệ</h2>
-                <p class="section-sub-heading"></p>
-            </div>
+                <p class="section-sub-heading">Hãy liên hệ chúng tôi qua email</p>
 
+                <div class="row contact-content">
+                    <div class="col col-half contact-info">
+                        <p><i class="ti-location-pin"></i>VietNam,VN</p>
+                        <p><i class="ti-mobile"></i>Phone: +84 000 999 444</p>
+                        <p><i class="ti-email"></i>Email: nhoxxi2002@gmail.com</p>
+                    </div>
+                    <div class="col col-half contact-form">
+                        <form action="">
+                            <div class="row">
+                                <div class="col col-half">
+                                    <input type="text" name="" required id="" class="form-control" placeholder="Name">
+                                </div>
+                                <div class="col col-half">
+                                    <input type="email" name="" required id="" class="form-control" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="row mt-8">
+                                <div class="col col-full">
+                                    <input type="text" name="" required id="" class="form-control" placeholder="Message">
+                                </div>
+                            </div>
+                            <input class="btn pull-right mt-16" type="submit" value="SEND">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- End: Contact -->
+
+            <div class="map-section">
+                <img src="./assets/img/map-img/map.jpg" alt="Map">
+            </div>
         </div>
 
         <div id="footer">
-
+            <div class="socials-list">
+                <a href="https://www.facebook.com/profile.php?id=100059196200972"><i class="ti-facebook"></i></a>
+                <a href="https://www.instagram.com/nhanlieu_/"><i class="ti-instagram"></i></a>
+                <a href="https://github.com/minhnhan1011"><i class="ti-github"></i></a>
+            </div>
+            <p class="copyright">Bản quyền bởi <a href="#">Nhân</a></p>
         </div>
     </div>
 
