@@ -18,7 +18,6 @@ html{
 .row{
     margin-left: -8px;
     margin-right: -8px;
-
 }
 
 .row::after{
@@ -81,6 +80,8 @@ html{
     color: #fff !important;
 }
 
+
+
 #header{
     height: 46px;
     width: 100%;
@@ -90,6 +91,7 @@ html{
     left: 0;
     right: 0;
     z-index: 1; /* Để phần nav trồi lên trên ảnh */
+    overflow: hidden;
 }
 
 #nav{
@@ -111,6 +113,7 @@ html{
 #nav > li > a{
     color: #fff;
     text-transform: uppercase;
+    font-size: 12px;
 }
 
 /* Tat ca thang co id=nav li a deu dc thua huong */
@@ -125,8 +128,6 @@ html{
 
 #nav li:hover .subnav{
     display: block;
-
-
 }
 
 /* 2 selector dung chung 1 thuoc tinh */
@@ -166,17 +167,30 @@ html{
     padding: 8px;
 }
 
+#header .menu-mobile,
 #header .search-btn{
     float: right; /* Làm cho nút tìm kiếm kéo về bên phải */
     padding: 0 21px;
 
 }
 
+
+#header .menu-mobile:hover{
+    background-color: #ccc;
+}
+
+#header .menu-mobile:hover .menu-icon{
+    background-color: #ccc;
+    color: #000;
+}
+
+
 #header .search-btn:hover{
     cursor: pointer; /* Khi di chuột vào nút tìm kiếm sẽ thay đổi con trỏ */
     background-color: red;
 }
 
+#header .menu-icon,
 #header .search-icon{
     font-size: 15px;
     color: #fff;
@@ -219,9 +233,12 @@ html{
 
 #content .content-section{
     width: 800px;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
     padding: 64px 0 112px ;
+    padding-left: 16px;
+    padding-right: 16px;
 }
 
 #content .section-heading{
