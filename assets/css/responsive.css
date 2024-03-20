@@ -11,11 +11,36 @@
 
 /* Mobile */
 @media (max-width: 739px){
+    #nav {
+        display: block;
+    }
+
     #nav > li {
+        display: block;
+    }
+
+    #nav > li:first-child{
+        display: inline-block;
+    }
+
+    #nav .subnav {
+        position: initial;
+    }
+
+    #nav .subnav a{
+        color: #ccc;
+        padding: 5px 42px;
+    }
+    #header {
+        overflow: hidden;
+    }
+
+    #header .menu-mobile{
         display: block;
     }
 
     #header .search-btn{
         display: none;
     }
+
 }

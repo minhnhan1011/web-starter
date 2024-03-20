@@ -91,7 +91,6 @@ html{
     left: 0;
     right: 0;
     z-index: 1; /* Để phần nav trồi lên trên ảnh */
-    overflow: hidden;
 }
 
 #nav{
@@ -165,6 +164,13 @@ html{
 #nav .nav-arrow{
     font-size: 12px;
     padding: 8px;
+}
+
+#header .menu-mobile{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
 }
 
 #header .menu-mobile,
