@@ -56,4 +56,18 @@
         width: 100%;
         margin-top: 16px;
     }
+
+    .contact-mobile{
+        width: 100%;
+    }
+
+    .mobile-center{
+        width: 100%;
+        text-align: center;
+    }
+
+    .s-col-full{
+        width: 100%;
+        margin-top: 8px;
+    }
 }
