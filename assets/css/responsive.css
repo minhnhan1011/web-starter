@@ -43,4 +43,17 @@
         display: none;
     }
 
+    #content .member-item{
+        margin-top: 30px;
+        width: 100%;
+    }
+
+    #content .avt{
+        width: 60%;
+    }
+
+    #tour .list-ticket{
+        width: 100%;
+        margin-top: 16px;
+    }
 }
