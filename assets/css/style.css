@@ -231,6 +231,7 @@ html{
 #slider .text-description{
     font-size: 20px;
     margin: 25px; /* Khoảng cách giữa 2 chữ */
+    text-shadow: 0 0 1px #000;
 }
 
 #content{
@@ -540,6 +541,8 @@ html{
     color: #333;
     opacity: 0.6;
     cursor: pointer;
+    padding: 12px 0;
+    display: inline-block;
 }
 
 #footer .copyright a:hover{

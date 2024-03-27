@@ -12,6 +12,10 @@
         padding: 15px;
     }
 
+    .contact-info{
+        line-height: 2;
+    }
+
     .social-list {
         font-size: 48px;
     }
