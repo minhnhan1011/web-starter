@@ -92,6 +92,7 @@ html {
     /* Để phần nav trồi lên trên ảnh */
 }
 
+
 #nav {
     display: inline-block;
 }
@@ -240,6 +241,83 @@ html {
     /* Khoảng cách giữa 2 chữ */
     text-shadow: 0 0 1px #000;
 }
+
+
+/* Icon Chatbot */
+.chatbot-icon {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    background-color: #000000; /* Thay đổi màu sắc theo ý bạn */
+    color: white;
+    border-radius: 50%;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 1000;
+}
+
+/* Chatbot Window */
+.chatbot-window {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    height: 400px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Chatbot Header */
+.chatbot-header {
+    background-color: #070808;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Close Button */
+#close-chatbot {
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Chatbot Messages */
+.chatbot-messages {
+    padding: 10px;
+    height: 70%;
+    overflow-y: auto;
+}
+
+/* Input Area */
+#chatbot-input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-top: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+#send-message {
+    padding: 10px 20px;
+    background-color: #000000;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    border-top: 1px solid #ccc;
+}
+
 
 #content {
     min-height: 1000px;

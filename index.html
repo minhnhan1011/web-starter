@@ -54,6 +54,25 @@
 
         </div>
 
+        <!-- Chatbot Icon -->
+        <div id="chatbot-icon" class="chatbot-icon">
+            <i class="ti-comments"></i>
+        </div>
+
+        <!-- Chatbot Window -->
+        <div id="chatbot-window" class="chatbot-window">
+            <div class="chatbot-header">
+                <span>Chatbot</span>
+                <i id="close-chatbot" class="ti-close"></i>
+            </div>
+            <div id="chatbot-messages" class="chatbot-messages">
+                <!-- Messages will appear here -->
+            </div>
+            <input id="chatbot-input" type="text" placeholder="Nhập câu hỏi của bạn...">
+            <button id="send-message">Gửi</button>
+        </div>
+
+
         <div id="content">
             <!-- About section -->
             <div id="band" class="content-section">
@@ -266,6 +285,56 @@
                 }
             }
         }
+
+        document.getElementById('chatbot-icon').addEventListener('click', function () {
+            const chatbotWindow = document.getElementById('chatbot-window');
+            chatbotWindow.style.display = 'block';
+        });
+
+        document.getElementById('close-chatbot').addEventListener('click', function () {
+            const chatbotWindow = document.getElementById('chatbot-window');
+            chatbotWindow.style.display = 'none';
+        });
+
+        document.getElementById('send-message').addEventListener('click', function () {
+            const userMessage = document.getElementById('chatbot-input').value;
+            if (userMessage.trim() !== '') {
+                displayMessage('Bạn: ' + userMessage);
+                document.getElementById('chatbot-input').value = '';
+
+                // Gửi tin nhắn đến API (ở đây có thể là OpenAI GPT-3 hoặc GPT-4)
+                sendToAPI(userMessage);
+            }
+        });
+
+        function displayMessage(message) {
+            const messagesDiv = document.getElementById('chatbot-messages');
+            const newMessage = document.createElement('div');
+            newMessage.textContent = message;
+            messagesDiv.appendChild(newMessage);
+            messagesDiv.scrollTop = messagesDiv.scrollHeight; // Cuộn xuống cuối
+        }
+
+        async function sendToAPI(message) {
+            // Thay thế phần này bằng mã gọi API của bạn (ví dụ OpenAI GPT-3 hoặc GPT-4)
+            const response = await fetch('https://api.openai.com/v1/completions', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer YOUR_API_KEY' // Thay YOUR_API_KEY bằng API key của bạn
+                },
+                body: JSON.stringify({
+                    model: 'text-davinci-003', // Hoặc model khác bạn sử dụng
+                    prompt: message,
+                    max_tokens: 150
+                })
+            });
+
+            const data = await response.json();
+            const chatbotReply = data.choices[0].text.trim();
+            displayMessage('Chatbot: ' + chatbotReply);
+        }
+
     </script>
 </body>
 
