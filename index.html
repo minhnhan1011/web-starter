@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
     <link rel="stylesheet" href="./assets/font-icon/themify-icons/themify-icons.css">
 
 </head>
+
 <body>
     <div id="main">
         <div id="header">
@@ -48,7 +50,7 @@
                 <h2 class="text-heading">ĐAM MÊ</h2>
                 <div class="text-description">Hãy đến trải nghiệm thoải đam mê</div>
             </div>
-            
+
 
         </div>
 
@@ -57,7 +59,12 @@
             <div id="band" class="content-section">
                 <h2 class="section-heading">BADMINTON</h2>
                 <p class="section-sub-heading">We love badminton</p>
-                <p class="about-text">Cầu lông, một môn thể thao tuyệt vời, kết hợp sức mạnh và sự tinh tế, thu hút người chơi từ khắp nơi trên thế giới. Trò chơi này yêu cầu kỹ thuật cao và tốc độ nhanh chóng khi hai đội chơi đối đầu nhau trên sân. Cầu lông đòi hỏi sự linh hoạt, sự đồng đội và chiến thuật tốt để chiến thắng. Người chơi sử dụng vợt nhẹ và cú đánh khéo léo để đưa cầu qua mạng, tạo nên những pha bóng đẹp mắt. Môn thể thao này không chỉ là một hoạt động giải trí mà còn là một cách tuyệt vời để cải thiện sức khỏe và tăng cường sự gắn kết xã hội.</p>
+                <p class="about-text">Cầu lông, một môn thể thao tuyệt vời, kết hợp sức mạnh và sự tinh tế, thu hút
+                    người chơi từ khắp nơi trên thế giới. Trò chơi này yêu cầu kỹ thuật cao và tốc độ nhanh chóng khi
+                    hai đội chơi đối đầu nhau trên sân. Cầu lông đòi hỏi sự linh hoạt, sự đồng đội và chiến thuật tốt để
+                    chiến thắng. Người chơi sử dụng vợt nhẹ và cú đánh khéo léo để đưa cầu qua mạng, tạo nên những pha
+                    bóng đẹp mắt. Môn thể thao này không chỉ là một hoạt động giải trí mà còn là một cách tuyệt vời để
+                    cải thiện sức khỏe và tăng cường sự gắn kết xã hội.</p>
                 <div class=" row member-list">
                     <div class="member-item col col-third text-center">
                         <p class="member-name">Name1</p>
@@ -130,7 +137,7 @@
                     <div class="contact-mobile col col-half contact-info">
                         <p><i class="ti-location-pin"></i>VietNam,VN</p>
                         <p><i class="ti-mobile"></i>Phone: +84 000 999 444</p>
-                        <p><i class="ti-email"></i>Email: nhoxxi2002@gmail.com</p>
+                        <p><i class="ti-email"></i>Email: ....@gmail.com</p>
                     </div>
                     <div class="contact-mobile col col-half contact-form">
                         <form action="#">
@@ -144,7 +151,8 @@
                             </div>
                             <div class="row mt-8">
                                 <div class="col col-full">
-                                    <input type="text" name="" required id="" class="form-control" placeholder="Message">
+                                    <input type="text" name="" required id="" class="form-control"
+                                        placeholder="Message">
                                 </div>
                             </div>
                             <input class="btn pull-right mt-16 contact-mobile" type="submit" value="SEND">
@@ -154,9 +162,9 @@
             </div>
             <!-- End: Contact -->
 
-            <div class="map-section">
+            <!-- <div class="map-section">
                 <img src="./assets/img/map-img/map.jpg" alt="Map">
-            </div>
+            </div> -->
         </div>
 
         <div id="footer">
@@ -203,62 +211,62 @@
         </div>
     </div>
 
-<script>
-    const buyBtns = document.querySelectorAll('.js-buy-tickets')
-    const modal = document.querySelector('.js-modal')
-    const modalClose = document.querySelector('.js-modal-close')
-    const modalContainer = document.querySelector('.js-modal-container')
+    <script>
+        const buyBtns = document.querySelectorAll('.js-buy-tickets')
+        const modal = document.querySelector('.js-modal')
+        const modalClose = document.querySelector('.js-modal-close')
+        const modalContainer = document.querySelector('.js-modal-container')
 
-    // Ham hien thi modal mua ve
-    function showBuyTickets(){
-        modal.classList.add('open')
-    }
-
-    // Ham an modal mua ve ( bo class open cua modal )
-    function hideBuyTickets(){
-        modal.classList.remove('open')
-    }
-
-    // Lap qua tung the button va nghe hanh vi click
-    for (const buyBtn of buyBtns){
-        buyBtn.addEventListener('click', showBuyTickets)
-    }
-    // Nghe hanh vi click vao button close
-    modalClose.addEventListener('click', hideBuyTickets)
-    modal.addEventListener('click', hideBuyTickets)
-    modalContainer.addEventListener('click', function(event){
-        event.stopPropagation();
-    })
-</script>  
-<script>
-    var header = document.getElementById('header');
-    var mobileMenu = document.getElementById('mobile-menu');
-    var headerHeight = header.clientHeight;
-
-    mobileMenu.onclick = function(){
-        var isClose = header.clientHeight === headerHeight;
-        if (isClose) {
-            header.style.height = 'auto';
-        } else {
-            header.style.height = null;
+        // Ham hien thi modal mua ve
+        function showBuyTickets() {
+            modal.classList.add('open')
         }
-    }
 
-    var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
-    for (var i = 0; i < menuItems.length; i++){
-        var menuItem = menuItems[i];
-       
+        // Ham an modal mua ve ( bo class open cua modal )
+        function hideBuyTickets() {
+            modal.classList.remove('open')
+        }
 
-        menuItem.onclick = function(envent){
-            var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
-            if (isParentMenu) {
-                event.preventDefault();
+        // Lap qua tung the button va nghe hanh vi click
+        for (const buyBtn of buyBtns) {
+            buyBtn.addEventListener('click', showBuyTickets)
+        }
+        // Nghe hanh vi click vao button close
+        modalClose.addEventListener('click', hideBuyTickets)
+        modal.addEventListener('click', hideBuyTickets)
+        modalContainer.addEventListener('click', function (event) {
+            event.stopPropagation();
+        })
+    </script>
+    <script>
+        var header = document.getElementById('header');
+        var mobileMenu = document.getElementById('mobile-menu');
+        var headerHeight = header.clientHeight;
+
+        mobileMenu.onclick = function () {
+            var isClose = header.clientHeight === headerHeight;
+            if (isClose) {
+                header.style.height = 'auto';
             } else {
                 header.style.height = null;
             }
         }
-    }
-</script>
-</body> 
+
+        var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+        for (var i = 0; i < menuItems.length; i++) {
+            var menuItem = menuItems[i];
+
+
+            menuItem.onclick = function (envent) {
+                var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+                if (isParentMenu) {
+                    event.preventDefault();
+                } else {
+                    header.style.height = null;
+                }
+            }
+        }
+    </script>
+</body>
 
 </html>
